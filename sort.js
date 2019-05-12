@@ -67,12 +67,10 @@ const mergeSort = (arr2) => {
         bi++
       }
     }
-
     return result
   }
 
   const newArrays = []
-
   // init sorted arrays
   for (let i = 0; i < arr.length; i += 2) {
     if (arr[i + 1]) {
@@ -81,7 +79,6 @@ const mergeSort = (arr2) => {
       newArrays.push([arr[i]])
     }
   }
-
   // merge sorted arrays
   const mergeSortedArrays = (sortedArraysList) => {
     const result = []
@@ -95,7 +92,6 @@ const mergeSort = (arr2) => {
     if (result.length > 1) return mergeSortedArrays(result)
     return result[0]
   }
-
   console.log('mergeSort', mergeSortedArrays(newArrays))
 }
 
