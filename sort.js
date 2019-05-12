@@ -17,16 +17,14 @@ const timer = (func) => {
 
 // bubble sort algorithm
 const bubbleSort = (arr) => {
-  const sortedArr = [...arr]
+  const newArr = [...arr]
 
-  for(let i = 0; i < sortedArr.length; i++ ){
-    for(let j = 0; j < sortedArr.length - i; j++) {
-      if (sortedArr[j] > sortedArr[j+1]) {
-        [sortedArr[j+1], sortedArr[j]] = [sortedArr[j], sortedArr[j+1]]
-      }
+  for(let i = 0; i < newArr.length; i++ ){
+    for(let j = 0; j < newArr.length - i; j++) {
+      if (newArr[j] > newArr[j+1]) [newArr[j+1], newArr[j]] = [newArr[j], newArr[j+1]]
     }
   }
-  console.log('bubbleSort:', sortedArr)
+  console.log('bubbleSort:', newArr)
 }
 
 timer(() => bubbleSort(array))
