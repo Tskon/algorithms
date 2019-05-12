@@ -4,7 +4,7 @@ const getArray = (n) => {
   for (let i = 0; i < n; i++) {
     array.push(getRandomNumber())
   }
-  array.push(0)
+  array.push(-5)
   return array
 }
 const array = getArray(5)
