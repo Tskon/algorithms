@@ -1,10 +1,9 @@
-const getRandomNumber = () => Math.round(Math.random() * 100000)
+const getRandomNumber = () => Math.round(Math.random() * 100)
 const getArray = (n) => {
-  const array = [0]
+  const array = []
   for (let i = 0; i < n; i++) {
     array.push(getRandomNumber())
   }
-  array.push(-5)
   return array
 }
 const array = getArray(10000)
@@ -71,15 +70,17 @@ const mergeSort = (arr2) => {
   }
 
   const newArrays = []
+
   // init sorted arrays
   for (let i = 0; i < arr.length; i += 2) {
-    if (arr[i + 1]) {
+    if (arr[i + 1] !== undefined) {
       newArrays.push(merge([arr[i]], [arr[i + 1]]))
     } else {
       newArrays.push([arr[i]])
     }
   }
   // merge sorted arrays
+
   const mergeSortedArrays = (sortedArraysList) => {
     const result = []
     for (let i = 0; i < sortedArraysList.length; i += 2) {
