@@ -7,7 +7,7 @@ const getArray = (n) => {
   array.push(-5)
   return array
 }
-const array = getArray(5)
+const array = getArray(10000)
 
 const timer = (func) => {
   const startTime = +new Date()
@@ -36,7 +36,7 @@ const insertSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     newArr.push(arr[i])
     for (let j = newArr.length - 1; j >= 0; j--) {
-      if (newArr[j] < newArr[j - 1]) {
+      if (j > 0 && newArr[j] < newArr[j - 1]) {
         [newArr[j], newArr[j - 1]] = [newArr[j - 1], newArr[j]]
       } else {
         break
