@@ -1,12 +1,13 @@
 const getRandomNumber = () => Math.round(Math.random() * 100)
 const getArray = (n) => {
-  const array = []
+  const array = [0]
   for (let i = 0; i < n; i++) {
     array.push(getRandomNumber())
   }
+  array.push(0)
   return array
 }
-const array = getArray(10000)
+const array = getArray(5)
 
 const timer = (func) => {
   const startTime = +new Date()
@@ -35,7 +36,7 @@ const insertSort = (arr) => {
   for (let i = 0; i < arr.length; i++) {
     newArr.push(arr[i])
     for (let j = newArr.length - 1; j >= 0; j--) {
-      if (j > 0 && newArr[j] < newArr[j - 1]) {
+      if (newArr[j] < newArr[j - 1]) {
         [newArr[j], newArr[j - 1]] = [newArr[j - 1], newArr[j]]
       } else {
         break
