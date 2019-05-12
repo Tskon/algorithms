@@ -6,7 +6,7 @@ const getArray = (n) => {
   }
   return array
 }
-const array = getArray(10)
+const array = getArray(5)
 
 const timer = (func) => {
   const startTime = +new Date()
@@ -20,16 +20,11 @@ const bubbleSort = (arr) => {
   const sortedArr = [...arr]
 
   for(let i = 0; i < sortedArr.length; i++ ){
-    let lowestNum = 0
-    let lowestNumPos = 0
     for(let j = 0; j < sortedArr.length - i; j++) {
-      if (sortedArr[j] < lowestNum || j === 0) {
-        lowestNum = sortedArr[j]
-        lowestNumPos = j
+      if (sortedArr[j] > sortedArr[j+1]) {
+        [sortedArr[j+1], sortedArr[j]] = [sortedArr[j], sortedArr[j+1]]
       }
     }
-    sortedArr.splice(lowestNumPos, 1)
-    sortedArr.push(lowestNum)
   }
   console.log('bubbleSort:', sortedArr)
 }
@@ -37,6 +32,7 @@ const bubbleSort = (arr) => {
 timer(() => bubbleSort(array))
 
 // insert sort algorithm
+
 
 
 // merge sort algorithm
