@@ -22,7 +22,9 @@ const bubbleSort = (arr) => {
 
   for (let i = 0; i < newArr.length; i++) {
     for (let j = 0; j < newArr.length - i; j++) {
-      if (newArr[j + 1] && newArr[j] > newArr[j + 1]) [newArr[j + 1], newArr[j]] = [newArr[j], newArr[j + 1]]
+      if (newArr[j + 1] && newArr[j] > newArr[j + 1]) {
+        [newArr[j + 1], newArr[j]] = [newArr[j], newArr[j + 1]]
+      }
     }
   }
   console.log('bubbleSort:', newArr)
