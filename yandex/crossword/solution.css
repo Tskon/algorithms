@@ -14,7 +14,7 @@ body {
     background: var(--color-black);
     border: 1px solid var(--color-black);
     display: block;
-    box-sizing: border-box;
+    box-sizing: content-box;
 }
 
 .crossword::after {content: ""; display: table; clear: both;}
@@ -25,7 +25,7 @@ body {
 .crossword.w-5, .space.w-5 {width: calc(var(--size) * 5);}
 .crossword.w-6, .space.w-6 {width: calc(var(--size) * 6);}
 .crossword.w-7, .space.w-7 {width: calc(var(--size) * 7);}
-.crossword.w-8, .space.w-8 {width: calc(var(--size) * 8);}
+.crossword.w-8, .space.w-8 {width: calc((var(--size) * 8));}
 
 .letter {
     background: white;
@@ -53,4 +53,8 @@ body {
     float: left;
     display: block;
     height: var(--size);
+}
+
+.space.w-2{
+    float: right;
 }
