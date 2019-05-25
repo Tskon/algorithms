@@ -17,7 +17,7 @@ body {
     box-sizing: border-box;
 }
 
-.crossword::after {clear: both;}
+.crossword::after {content: ""; display: table; clear: both;}
 .crossword.w-1, .space.w-1 {width: calc(var(--size) * 1);}
 .crossword.w-2, .space.w-2 {width: calc(var(--size) * 2);}
 .crossword.w-3, .space.w-3 {width: calc(var(--size) * 3);}
