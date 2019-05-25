@@ -1,0 +1,33 @@
+div{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+}
+div:after{
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border: 1px solid #777;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div:before{
+    content: '';
+    display: block;
+    width: 8px;
+    height: 7px;
+    border-top: transparent solid 2px;
+    border-left: 1px solid #777;
+    border-bottom: 1px solid #777;
+    position: absolute;
+    bottom: -4px;
+    left: 5px;
+    transform: skewY(-61deg) rotate(7deg);
+}
