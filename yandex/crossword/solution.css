@@ -37,10 +37,11 @@ body {
     height: var(--size);
     line-height: var(--size);
     text-align: center;
+    position: relative;
 }
 
 .letter::after {
-    content: attr(number);
+    content: attr(data-number);
     line-height: 1.3;
     font-size: 75%;
     position: absolute;
