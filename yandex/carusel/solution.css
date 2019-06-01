@@ -94,7 +94,7 @@ body {
     padding-left: 65px;
     display: flex;
     width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
     padding-bottom: 24px;
     box-sizing: border-box;
     position: relative;
@@ -106,11 +106,11 @@ body {
 }
 
 .article {
-    display: flex;
     flex-direction: column;
     width: 328px;
+    min-width: 328px;
     margin-right: 16px;
-    /*display: none;*/
+    display: none;
     height: 400px;
 }
 
@@ -157,6 +157,7 @@ body {
     margin-top: 8px;
     overflow: hidden;
     display: -webkit-box;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     max-height: 40px;
     object-fit: cover;
@@ -167,6 +168,7 @@ body {
     margin-top: 4px;
     overflow: hidden;
     display: -webkit-box;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     max-height: 48px;
 }
