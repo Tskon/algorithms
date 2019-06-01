@@ -1,0 +1,5 @@
+.street:last-child{
+    transform: rotate(90deg);
+    top: 170px;
+    left: 222px;
+}
