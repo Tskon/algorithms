@@ -193,20 +193,20 @@ body {
     display: none;
 }
 
-#restaurants:checked .main .article.category__restaurants {
+#restaurants:checked ~ .main .article.category__restaurants {
     display: block;
 }
 
-#restaurants:checked .main .tags__label.restaurants {
+#restaurants:checked ~ .main .tags__label.restaurants {
     background-color: #fff;
     color: black;
 }
 
-#popular:checked .main .article.category__popular {
+#popular:checked ~ .main .article.category__popular {
     display: block;
 }
 
-#popular:checked .main .tags__label.popular {
+#popular:checked ~ .main .tags__label.popular {
     background-color: #fff;
     color: black;
 }
